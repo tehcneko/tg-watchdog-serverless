@@ -14,7 +14,7 @@
     "lint": "run-s lint:*",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
-    "format": "prettier --write src/ cloud/"
+    "format": "prettier --write web/ cloud/"
   },
   "dependencies": {
     "@noble/hashes": "^2.4.0",

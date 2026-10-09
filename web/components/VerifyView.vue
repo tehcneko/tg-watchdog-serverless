@@ -93,7 +93,10 @@ function captchaVerify(token: string) {
     <div class="footer mt-auto">
       <p>Powered By</p>
       <p>
-        <a class="footer-link" href="https://github.com/tehcneko/tg-watchdog-serverless" target="_blank"
+        <a
+          class="footer-link"
+          href="https://github.com/tehcneko/tg-watchdog-serverless"
+          target="_blank"
           >TG Watchdog Serverless</a
         >
       </p>
