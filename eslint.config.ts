@@ -25,6 +25,9 @@ export default defineConfigWithVueTs(
     files: ['cloud/types/sdk/**/*.d.ts'],
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-empty-object-type': 'off',
+      '@typescript-eslint/no-unsafe-function-type': 'off',
+      'no-var': 'off'
     },
   },
 

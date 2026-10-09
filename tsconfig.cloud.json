@@ -20,7 +20,7 @@
 
     "paths": {
       "sdk": ["./cloud/types/sdk/index.d.ts"],
-      "sdk/*": ["./cloud/types/sdk/*"],
+      "sdk/db": ["./cloud/types/sdk/db.d.ts"],
       "lib/*": ["./cloud/lib/*"],
       "schema": ["./cloud/schema.ts"]
     }

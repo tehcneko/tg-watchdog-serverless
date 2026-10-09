@@ -1,8 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-object-type */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unsafe-function-type */
-/* eslint-disable no-var */
-
 /// <reference lib="es2015" />
 /// <reference lib="es2018.asynciterable" />
 
