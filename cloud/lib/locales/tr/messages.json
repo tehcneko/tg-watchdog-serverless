@@ -1,0 +1,8 @@
+{
+  "welcome_body": "Merhaba! ben Telegram gruplarının bekçisiyim! 🐶\nYeni üyeleri CAPTCHA ile kontrol eder, olası spam bot tehditlerini önlerim.",
+  "welcome_setmeasadmin": "Beni grup yöneticisi olarak ayarla",
+  "verify_message": "Merhaba! Ben %{groupname} grubunun bekçisiyim! 🐶",
+  "verify_loading": "Bir saniye bekle⋯",
+  "verify_info": "Gruba katılabilmek için aşağıdaki CAPTCHA doğrulama linkine tıklaman gerekiyor.",
+  "verify_btn": "Doğrulamayı başlat"
+}

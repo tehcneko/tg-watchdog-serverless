@@ -1,0 +1,18 @@
+{
+  "LOGIN_REMINDER": "Girişiniz Doğrulanıyor...",
+  "VERIFING_BANNER": "İnsan mısın?",
+  "VERIFING_SUBTITLE": "Gruba katılabilmek için aşağıdaki CAPTCHA doğrulamasını tamamla.",
+  "PASSED_TITLE": "Doğrulama tamamlandı",
+  "PASSED_DESC": "Mesaj listende katıldığın grubu görebilirsin.<br>Eğer göremiyorsan, telegram uygulamanı yeniden başlat.",
+  "PLEASEWAIT": "Lütfen bekleyin...",
+  "ERROR_TITLE": "Oops...",
+  "ERROR_DESC": "Bir hata meydana geldi: {errmsg}<br>Lütfen gruba yeniden başvurun ve yeniden deneyin.",
+  "ERRCODE_UNKNOWN": "beklenmeyen hata",
+  "ERRCODE_INVALID_REQUEST": "geçersiz istek",
+  "ERRCODE_TELEGRAM_ACCOUNT_INFO_ERROR": "Geçersiz Telegram hesap bilgisi",
+  "ERRCODE_REQUEST_OVERTIMED": "doğrulama süresi doldu",
+  "ERRCODE_SERVER_UNAVAILABLE": "sunucu bakımda olabilir",
+  "ERRCODE_CAPTCHA_NOT_PASSED": "CAPTCHA doğrulamanız başarısız oldu",
+  "LANGUAGE_TEST": "Artık grubunuzda Türkçe dil ile doğrulama yapacaksınız.",
+  "RESULTPAGE_BUTTON_DONE": "Tamamlandı"
+}

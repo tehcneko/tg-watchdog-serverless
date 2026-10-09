@@ -1,0 +1,18 @@
+{
+  "LOGIN_REMINDER": "Проверка вашего входа…",
+  "VERIFING_BANNER": "Не спам робот ли вы?",
+  "VERIFING_SUBTITLE": "Чтобы присоединиться к группе, введите капчу ниже.",
+  "PASSED_TITLE": "Проверка окончена",
+  "PASSED_DESC": "Теперь группа, к которой вы только что присоединились, находится в списке чатов.<br> Если же вы её там не видите, попробуйте перезапустить Телеграм.",
+  "PLEASEWAIT": "Пожалуйста, подождите…",
+  "ERROR_TITLE": "Упс…",
+  "ERROR_DESC": "Код ошибки: {errmsg}<br>Пожалуйста, перезайдите в группу и попробуйте ещё раз.",
+  "ERRCODE_UNKNOWN": "непредвиденная ошибка",
+  "ERRCODE_INVALID_REQUEST": "некорректный запрос",
+  "ERRCODE_TELEGRAM_ACCOUNT_INFO_ERROR": "Некорректная учетная запись Telegram",
+  "ERRCODE_REQUEST_OVERTIMED": "срок проверки истёк",
+  "ERRCODE_SERVER_UNAVAILABLE": "сервер может находиться в процессе обслуживания",
+  "ERRCODE_CAPTCHA_NOT_PASSED": "Вы не прошли капчу",
+  "LANGUAGE_TEST": "Язык был изменён на английский.",
+  "RESULTPAGE_BUTTON_DONE": "Готово"
+}

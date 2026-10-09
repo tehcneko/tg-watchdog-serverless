@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.cloud.tsbuildinfo",
+    "target": "es2025",
+    "lib": ["ESNext"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "module": "esnext",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "paths": {
+      "sdk": ["./cloud/types/sdk/index.d.ts"],
+      "sdk/*": ["./cloud/types/sdk/*"],
+      "lib/*": ["./cloud/lib/*"],
+      "schema": ["./cloud/schema.ts"]
+    }
+  },
+  "include": ["cloud/**/*.ts"]
+}

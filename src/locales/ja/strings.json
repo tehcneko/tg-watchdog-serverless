@@ -1,0 +1,18 @@
+{
+  "LOGIN_REMINDER": "ログイン確認中…",
+  "VERIFING_BANNER": "あなたは人間ですか？",
+  "VERIFING_SUBTITLE": "グループチャットに参加するには、以下の CAPTCHA を完了してください。",
+  "PASSED_TITLE": "検証完了",
+  "PASSED_DESC": "ただいま参加したグループチャットは、チャットリストに表示されました。<br>表示されない場合は、Telegram を再起動してみてください。",
+  "PLEASEWAIT": "しばらくお待ちください…",
+  "ERROR_TITLE": "おっと…",
+  "ERROR_DESC": "エラーが発生しました。{errmsg}<br>お手数ですが、グループへもう一度申し込みしてください。",
+  "ERRCODE_UNKNOWN": "予期せぬエラー",
+  "ERRCODE_INVALID_REQUEST": "無効なリクエスト",
+  "ERRCODE_TELEGRAM_ACCOUNT_INFO_ERROR": "Telegram アカウント情報が無効",
+  "ERRCODE_REQUEST_OVERTIMED": "確認の有効期限が切れました",
+  "ERRCODE_SERVER_UNAVAILABLE": "サーバーはメンテナンス中の可能性があります",
+  "ERRCODE_CAPTCHA_NOT_PASSED": "CAPTCHA の確認が失敗しました",
+  "LANGUAGE_TEST": "現在、日本語環境を使用しています。",
+  "RESULTPAGE_BUTTON_DONE": "完了"
+}
