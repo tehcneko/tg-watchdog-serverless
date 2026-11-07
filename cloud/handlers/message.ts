@@ -1,7 +1,6 @@
 import { type UpdateHandler } from 'sdk'
 import startHandler from 'lib/handlers/start'
-import getPendingRequestsHandler from 'lib/handlers/get_pending_requests'
-import { BOT_USERNAME, DEBUG } from 'lib/constants'
+import { BOT_USERNAME } from 'lib/constants'
 import { cleanupPendingRequests } from 'lib/join_request'
 import { getI18n, normalizeLanguageTag } from 'lib/locales'
 
@@ -14,9 +13,6 @@ const handler: UpdateHandler<'message'> = async (message, ctx) => {
       ...ctx,
       t: i18n.t.bind(i18n),
     })
-  }
-  if (DEBUG && message.text == '/get_pending_requests') {
-    await getPendingRequestsHandler(message, ctx)
   }
   await cleanupPendingRequests()
 }
