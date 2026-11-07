@@ -1,8 +1,8 @@
 import { api, EndpointError, db } from 'sdk'
 import { lte, inArray, eq } from 'sdk/db'
 import { pendingRequests } from 'schema'
-import { sha256 } from '@noble/hashes/sha2.js'
-import { utf8ToBytes } from '@noble/hashes/utils.js'
+import { sha256 } from '@noble/hashes/webcrypto.js'
+import { randomBytes, utf8ToBytes } from '@noble/hashes/utils.js'
 
 export type PendingRequest = {
   user_id: number
@@ -84,8 +84,8 @@ export async function deletePendingRequestById(request_id: string) {
 }
 
 export async function insertPendingRequest(request: PendingRequest) {
-  const request_id =
-    Date.now().toString() + ':' + sha256(utf8ToBytes(JSON.stringify(request))).toHex()
+  const request_hash = await sha256(utf8ToBytes(JSON.stringify(request)))
+  const request_id = Date.now().toString() + ':' + randomBytes(32).toHex() + request_hash.toHex()
   await db.insert(pendingRequests).values({
     ...request,
     request_id,

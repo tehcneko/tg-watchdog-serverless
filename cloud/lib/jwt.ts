@@ -1,5 +1,4 @@
-import { hmac } from '@noble/hashes/hmac.js'
-import { sha256 } from '@noble/hashes/sha2.js'
+import { hmac, sha256 } from '@noble/hashes/webcrypto.js'
 
 const encoder = new TextEncoder()
 const decoder = new TextDecoder('utf-8', { fatal: true })
@@ -36,10 +35,10 @@ function constantTimeEqual(left: Uint8Array, right: Uint8Array): boolean {
 /**
  * Sign JSON claims as a compact JWT using HS256.
  */
-export function signJwt<TClaims extends Record<string, unknown>>(
+export async function signJwt<TClaims extends Record<string, unknown>>(
   claims: TClaims,
   secret: string,
-): string {
+): Promise<string> {
   if (secret.length === 0) {
     throw new TypeError('JWT secret must not be empty')
   }
@@ -47,7 +46,7 @@ export function signJwt<TClaims extends Record<string, unknown>>(
   const header = encodeBase64Url(encoder.encode('{"alg":"HS256","typ":"JWT"}'))
   const payload = encodeBase64Url(encoder.encode(serialize(claims)))
   const signingInput = `${header}.${payload}`
-  const signature = hmac(sha256, encoder.encode(secret), encoder.encode(signingInput))
+  const signature = await hmac(sha256, encoder.encode(secret), encoder.encode(signingInput))
   return `${signingInput}.${encodeBase64Url(signature)}`
 }
 
@@ -56,10 +55,10 @@ export function signJwt<TClaims extends Record<string, unknown>>(
  *
  * Validates `exp` and `nbf` when present, using Unix seconds.
  */
-export function verifyJwt<TClaims extends Record<string, unknown> = Record<string, unknown>>(
+export async function verifyJwt<TClaims extends Record<string, unknown> = Record<string, unknown>>(
   token: string,
   secret: string,
-): TClaims {
+): Promise<TClaims> {
   if (secret.length === 0) {
     throw new TypeError('JWT secret must not be empty')
   }
@@ -76,7 +75,7 @@ export function verifyJwt<TClaims extends Record<string, unknown> = Record<strin
     }
 
     const signingInput = `${parts[0]}.${parts[1]}`
-    const expected = hmac(sha256, encoder.encode(secret), encoder.encode(signingInput))
+    const expected = await hmac(sha256, encoder.encode(secret), encoder.encode(signingInput))
     const actual = decodeBase64Url(parts[2])
     if (!constantTimeEqual(expected, actual)) {
       throw new Error('Invalid Signature')

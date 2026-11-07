@@ -102,7 +102,7 @@ async function getWebAppUrl(request: PendingRequest): Promise<string> {
     exp: exp,
     nbf: now,
   }
-  const token = signJwt(claims, JWT_SECRET)
+  const token = await signJwt(claims, JWT_SECRET)
   return `${BASE_URL}/#request_token=${token}`
 }
 

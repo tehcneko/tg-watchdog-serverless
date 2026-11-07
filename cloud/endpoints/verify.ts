@@ -59,7 +59,7 @@ const handler: EndpointHandler<Query, object> = async (input, ctx) => {
 
 async function decodeJwt(token: string): Promise<DecodedToken> {
   try {
-    return verifyJwt(token, JWT_SECRET) as DecodedToken
+    return (await verifyJwt(token, JWT_SECRET)) as DecodedToken
   } catch (err: unknown) {
     console.error(err)
     throw new EndpointError('REQUEST_OVERTIMED', {
